@@ -42,7 +42,7 @@ function Main(props) {
                         <Switch>
                                 <Route path="/home" component={HomePage} />
                                 <Route exact path="/menu" component={() => <Menu dishes={state.dishes} />} />
-                                <Route exact path="/contactus" component={() => Contact} />
+                                <Route exact path="/contactus" component={() => <Contact />} />
                                 <Route exact path="/aboutus" component={() => <About leaders={state.leaders} />} />
                                 <Route path="/menu/:dishId" component={DishWithId} />
                                 <Redirect to="/home" />
