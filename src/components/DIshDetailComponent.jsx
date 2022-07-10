@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from "reactstrap";
 
-function RenderDish({ dish }) {
+export function RenderDish({ dish }) {
         return (
                 <div className="col-12 col-sm-5">
                         <Card>
@@ -40,8 +40,8 @@ export function RenderComments({ comments }) {
 }
 function DishDetail(props) {
         if (props.dish != null) {
-                const dish = this.props.dish;
-                const comments = this.props.comments;
+                const dish = props.dish;
+                const comments = props.comments;
                 return (
                         <div className="container">
                                 <div className="row">
