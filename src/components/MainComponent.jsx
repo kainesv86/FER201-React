@@ -8,6 +8,7 @@ import Contact from "./ContactComponent";
 import About from "./AboutComponents";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { useSelector } from "react-redux";
+import TestFetchComponent from "../useFetch/TestFetchComponent";
 
 const Main = () => {
         const dishes = useSelector((state) => state.dishes);
@@ -40,6 +41,7 @@ const Main = () => {
                                         <Route path="/home" component={HomePage} />
                                         <Route exact path="/aboutus" component={() => <About leaders={leaders} />} />
                                         <Route exact path="/menu" component={() => <Menu dishes={dishes} />} />
+                                        <Route exact path="/comment" component={() => <TestFetchComponent />} />
                                         <Route exact path="/contactus" component={() => <Contact />} />
                                         <Route path="/menu/:dishId" component={DishWithId} />
                                         <Redirect to="/home" />

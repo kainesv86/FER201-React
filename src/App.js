@@ -3,6 +3,7 @@ import Main from "./components/MainComponent";
 import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "./redux/configureStore";
 import { Provider } from "react-redux";
+import TestFetchComponent from "./useFetch/TestFetchComponent";
 
 function App() {
         const store = configureStore();
